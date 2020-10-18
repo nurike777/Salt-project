@@ -1,0 +1,15 @@
+.title {
+  color: $head-color;
+  font-family: $proxima-bold-font;
+  font-size: 55px;
+  font-weight: 700;
+  text-align: left;
+
+  @include for-phone-only {
+    font-size: 26px;
+  }
+
+  @include for-tablet-portait-only {
+    font-size: 32px;
+  }
+}

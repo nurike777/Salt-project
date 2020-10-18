@@ -1,0 +1,25 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: $content-size;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.container-wide {
+	max-width: $content-size-wide;
+	margin: 0 auto;
+	padding: 0 20px;
+}

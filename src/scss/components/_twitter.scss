@@ -1,0 +1,47 @@
+.twitter {
+  min-width: 300px;
+  height: 295px;
+  background: $head-color;
+
+  &-head {
+    display: flex;
+    height: 60px;
+    background: $text-color;
+  }
+
+  &-icon {
+    min-width: 60px;
+    background: $twitter-bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-icon__bg {
+    width: 38px;
+    height: 38px;
+    border: 2px solid $head-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-info {
+    width: 100%;
+    padding: 6px 10px 0 12px;
+  }
+
+  &-info__title {
+    @include twitter-text(24px);
+
+    display: block;
+  }
+
+  &-info__subtitle {
+    @include twitter-text(14px);
+
+    position: relative;
+    top: -8px;
+  }
+}

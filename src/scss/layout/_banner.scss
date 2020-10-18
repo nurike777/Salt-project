@@ -1,0 +1,42 @@
+.banner {
+  padding: 91px 0 74px;
+  background: url('../assets/img/banner-bg.png') no-repeat;
+  background-size: 100% 100%;
+
+  @include for-phone-only {
+    padding: 40px 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include for-phone-only {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    max-width: 400px;
+
+    @include for-phone-only {
+      font-size: 30px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrap {
+    @include for-phone-only {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    width: 171px;
+  }
+}

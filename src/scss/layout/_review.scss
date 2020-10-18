@@ -1,0 +1,130 @@
+body.is-locked-modal {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.review {
+  padding: 40px 0;
+
+  @include for-desktop-up {
+    padding: 106px 0 120px;
+  }
+
+  &__row {
+    padding-left: 25px;
+
+    @include for-desktop-up {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-info {
+    margin-bottom: 30px;
+
+    @include for-desktop-up {
+      max-width: 470px;
+      padding-top: 101px;
+      margin-right: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-info__title {
+    color: $text-color;
+    font-size: 40px;
+    margin-bottom: 12px;
+  }
+
+  &-info__description {
+    @include text-descr;
+
+    margin-bottom: 29px;
+  }
+
+  &-info__link {
+    width: 171px;
+  }
+
+  &-video {
+    width: 100%;
+    height: 452px;
+    background: url('../assets/img/review-video.png') no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    object-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 165px;
+
+    @include for-phone-only {
+      padding-top: 65px;
+      height: 300px;
+    }
+
+    @include for-desktop-up {
+      width: 724px;
+      margin: 0;
+    }
+  }
+
+  &-video__play {
+    margin-bottom: 17px;
+  }
+
+  &-video__title {
+    color: $head-color;
+    font-family: $releway-font;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &-video__subtitle {
+    color: $head-color;
+    font-family: $releway-sbold-font;
+    font-size: 33px;
+    font-weight: 700;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include for-phone-only {
+      font-size: 22px;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    align-items: center;
+    background: $overlay-color;
+    z-index: 17;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-modal {
+    width: 724px;
+    height: 452px;
+    margin: auto;
+  }
+}

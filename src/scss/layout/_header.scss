@@ -1,0 +1,129 @@
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 810px;
+  background: url('../assets/img/header-bg.png') no-repeat center;
+  background-size: cover;
+  padding-bottom: 74px;
+
+  @include for-phone-only {
+    min-height: auto;
+  }
+
+  .swiper-container {
+    max-width: 926px;
+    height: 309px;
+    min-height: 309px;
+    margin-bottom: 83px;
+    margin-left: 78px;
+    position: static;
+
+    @include for-phone-only {
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .swiper-pagination {
+    display: none;
+    width: auto;
+    right: 53px;
+    top: 41%;
+    left: auto;
+
+    @include for-big-desktop-up {
+      display: block;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    width: 19px;
+    height: 18px;
+    border-radius: 0;
+    background: url('../assets/img/swiper-bullet.svg') no-repeat;
+    background-position: center;
+    opacity: 1;
+    margin-bottom: 15px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 19px;
+    height: 22px;
+    border-radius: 0;
+    background: url('../assets/img/swiper-bullet-active.svg') no-repeat;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  &-slider {
+    max-width: 570px;
+  }
+
+  &-slider__title {
+    margin-bottom: 11px;
+  }
+
+  &-slider__description {
+    @include text-descr;
+
+    max-width: 460px;
+    color: $head-color;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 44px;
+    margin-left: 3px;
+  }
+
+  &-slider__link {
+    width: 174px;
+    margin-left: 3px;
+  }
+
+  &-slider__img {
+    margin-top: 71px;
+
+    @include for-phone-only {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link--down {
+    @include link-nav;
+
+    position: relative;
+    text-align: center;
+    padding-bottom: 51px;
+
+    &:hover::after {
+      transition: 0.3s;
+      background: url('../assets/img/down_arrow-hover.svg') no-repeat;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 32px;
+      height: 17px;
+      background: url('../assets/img/down_arrow.png') no-repeat;
+    }
+  }
+}
