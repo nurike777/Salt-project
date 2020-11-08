@@ -1,7 +1,7 @@
 const scrollDown = document.getElementById('linkDown');
 const work = document.getElementById('work');
 
-if (scrollDown){
+if (scrollDown) {
   scrollDown.addEventListener('click', (event) => {
     event.preventDefault();
     work.scrollIntoView({
@@ -9,4 +9,4 @@ if (scrollDown){
       behavior: "smooth"
     })
   })
-};
+}

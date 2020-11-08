@@ -18,4 +18,4 @@ window.addEventListener(event, event => {
     menu.classList.remove('is-open');
     document.body.classList.remove('is-locked');
   }
-});
+})

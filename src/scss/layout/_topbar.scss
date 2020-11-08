@@ -35,7 +35,7 @@ body.is-locked {
 
     @include for-tablet-portait-only {
       position: fixed;
-      top: 83px;
+      top: 0;
       height: 100%;
       right: -100%;
       z-index: 15;
@@ -121,6 +121,19 @@ body.is-locked {
     &:focus::after {
       opacity: 1;
       transform: translateY(0px);
+    }
+
+    &.is-active {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: 3px;
+        opacity: 1;
+        transform: translateY(0px);
+      }
     }
 
     @include for-phone-only {
