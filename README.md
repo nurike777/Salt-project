@@ -1,6 +1,6 @@
 Instructions:
   -download project
-  -npm init
+  -npm install
 
 Commands:
   npm run dev - запуск сборки в dev режиме

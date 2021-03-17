@@ -37,6 +37,10 @@
   &__wrap {
     width: calc(100% - 300px);
 
+    @include for-phone-only {
+      width: 100%;
+    }
+
     @include for-desktop-up {
       display: flex;
       justify-content: space-between;

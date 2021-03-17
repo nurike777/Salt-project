@@ -12,11 +12,10 @@ body.is-locked-modal {
   }
 
   &__row {
-    padding-left: 25px;
-
     @include for-desktop-up {
       display: flex;
       justify-content: space-between;
+      padding-left: 25px;
     }
   }
 
@@ -74,6 +73,11 @@ body.is-locked-modal {
 
   &-video__play {
     margin-bottom: 17px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   &-video__title {
